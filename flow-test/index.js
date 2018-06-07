@@ -26,24 +26,30 @@
 // arr.push('Hello')
 
 // 4. 类和对象
-class Bar {
-    x: string;           // x 是字符串
-    y: string | number;  // y 可以是字符串或者数字
-    z: boolean;
+// class Bar {
+//     x: string;           // x 是字符串
+//     y: string | number | void;  // y 可以是字符串或者数字 void 代表不传值的情况
+//     z: boolean;
     
-    //构造函数
-    constructor(x: string, y: string | number) {
-      this.x = x
-      this.y = y
-      this.z = false
-    }
-  }
+//     //构造函数
+//     constructor(x: string, y: string | number | void) {
+//       this.x = x
+//       this.y = y
+//       this.z = false
+//     }
+//   }
   
-  var bar: Bar = new Bar('hello', 4)
+//   var bar: Bar = new Bar('hello', 4)
   
-  var obj: { a: string, b: number, c: Array<string>, d: Bar } = {
-    a: 'hello',
-    b: 11,
-    c: ['hello', 'world'],
-    d: new Bar('hello', 3)
-  }
+//   var obj: { a: string, b: number, c: Array<string>, d: Bar } = {
+//     a: 'hello',
+//     b: 11,
+//     c: ['hello', 'world'],
+//     d: new Bar('hello', 3)
+//   }
+
+// 5. null 若想让任意类型 T 为 null 或者 undefined， 只需写成 ?T 格式 
+var foo: ?string = undefined // No errors
+var foo2: ?string = null // No errors
+var foo3: ?string = 'hello' // No errors
+var foo4: ?string = 11 // errors
